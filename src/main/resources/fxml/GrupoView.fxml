@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane fx:id="view" hgap="5.0" vgap="5.0"
+          xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints minWidth="-Infinity" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0"
+                           prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER"
+                           minWidth="10.0" prefWidth="50.0" />
+    </columnConstraints>
+    <children>
+        <Label text="Denominación:" />
+        <Label text="Inicio del curso:" GridPane.rowIndex="1" />
+        <Label text="Fin del curso:" GridPane.rowIndex="2" />
+        <Label text="Exámenes:" GridPane.rowIndex="3" />
+        <Label text="Prácticas:" GridPane.rowIndex="4" />
+        <Label text="Actitiud:" GridPane.rowIndex="5" />
+        <TextField fx:id="denominacionText" GridPane.columnIndex="1"
+                   GridPane.columnSpan="2" />
+        <DatePicker fx:id="inicioCursoDatePicker"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <DatePicker fx:id="finCursoDatePicker"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Slider fx:id="examenesSlider" majorTickUnit="10.0"
+                minorTickCount="9" showTickMarks="true" snapToTicks="true"
+                GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Slider fx:id="practicasSlider" majorTickUnit="10.0"
+                minorTickCount="9" showTickMarks="true" snapToTicks="true"
+                GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Slider fx:id="actitudSlider" majorTickUnit="10.0"
+                minorTickCount="9" showTickMarks="true" snapToTicks="true"
+                GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Label fx:id="examenesLabel" text="0%" GridPane.columnIndex="2"
+               GridPane.rowIndex="3" />
+        <Label fx:id="practicasLabel" text="0%" GridPane.columnIndex="2"
+               GridPane.rowIndex="4" />
+        <Label fx:id="actitudLabel" text="0%" GridPane.columnIndex="2"
+               GridPane.rowIndex="5" />
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</GridPane>

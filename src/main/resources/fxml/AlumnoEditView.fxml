@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane fx:id="view" hgap="5.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+    </columnConstraints>
+    <children>
+        <Label text="Nombre:" />
+        <Label text="Apellidos:" GridPane.rowIndex="1" />
+        <Label text="Fecha de nacimiento:" GridPane.rowIndex="2" />
+        <Label text="Sexo:" GridPane.rowIndex="3" />
+        <Label text="Repite:" GridPane.rowIndex="4" />
+        <TextField fx:id="nombreText" GridPane.columnIndex="1" />
+        <TextField fx:id="apellidosText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <DatePicker fx:id="nacimientoDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <ComboBox fx:id="sexoCombo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <CheckBox fx:id="repiteCheck" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</GridPane>
